@@ -20,6 +20,6 @@ The application code starts inside **/src**. The code organization s fairly simp
 
 - Just look for the imports inside the file to navigate to the desired code block. Functions defined are small chunks of code which was kept as much readable as possible.
 
-- For JWT and DB options are set by user in `.env` whose keys are self exlanatory.
+- For JWT and DB options are set by user in `src/config/index.js` whose keys are self exlanatory.
 
 - `express-validator` has been used to validate API body, params and queries. (Google for documentation of the library). Validator functions for `users` APIs are defined inside `/src/controllers/users/_requestValidators.js`
