@@ -1,9 +1,7 @@
-require('dotenv').config({ path: '../.env' });
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import expressValidator from 'express-validator';
-
 import sendResponse from './utils/sendResponse';
 
 const app = express();
