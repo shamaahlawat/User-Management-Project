@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import expressValidator from 'express-validator';
 import sendResponse from './utils/sendResponse';
+import './db';
 
 const app = express();
 app.disable('x-powered-by');
