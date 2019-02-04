@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import expressValidator from 'express-validator';
 import sendResponse from './utils/sendResponse';
+import apiRoutes from './routes';
 import './db';
 
 const app = express();
@@ -20,16 +21,7 @@ app.use(
 );
 
 // Routes
-
-// root route
-app.get('/', (req, res) => {
-  sendResponse(
-    res,
-    200,
-    { message: 'Welcome to user services' },
-    'Request Successful'
-  );
-});
+app.use('/', apiRoutes);
 
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {
