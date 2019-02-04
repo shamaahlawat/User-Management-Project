@@ -26,7 +26,6 @@ app.use('/', apiRoutes);
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {
   const err = new Error('Not Found');
-  err.message = 'Not found';
   sendResponse(res, 404, {}, err.message);
   next();
 });
