@@ -120,6 +120,10 @@ export async function updateUserProfileService({ email, updates }) {
   if (!user) {
     throw { code: 404, msg: 'User not found' };
   }
+
+  console.log('-------> user  =', user);
+  console.log('-------> user doc =', user._doc);
+
   const permissions = user._doc.permissions;
   updates.permissions = permissions;
   if (updates.email) delete updates.email;

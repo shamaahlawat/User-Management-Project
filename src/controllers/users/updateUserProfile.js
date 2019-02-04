@@ -14,6 +14,11 @@ export async function updateUserProfile(req, res) {
     }
     const { email } = req.user;
     const { updates } = req.body;
+
+    if (!updates) {
+      return sendResponse(res, 422, {}, 'Missing updates object');
+    }
+
     const data = await updateUserProfileService({
       email,
       updates

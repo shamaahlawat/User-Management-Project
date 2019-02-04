@@ -48,31 +48,31 @@ export function validateGetPermissionsPayload(req) {
 
 export function validateUpdateProfilePayload(req) {
   req
-    .checkBody('firstName', 'First name is required/min 3 chars')
+    .checkBody('updates.firstName', 'First name is required/min 3 chars')
     .isLength({ min: 3 })
     .optional();
   req
-    .checkBody('firstName', 'Last name is required/min 3 chars')
+    .checkBody('updates.lastName', 'Last name is required/min 3 chars')
     .isLength({ min: 2 })
     .optional();
   req
-    .checkBody('socialLinks.facebook', 'Facebook url is invalid')
+    .checkBody('updates.socialLinks.facebook', 'Facebook url is invalid')
     .isURL()
     .optional();
   req
-    .checkBody('socialLinks.twitter', 'Twitter url is invalid')
+    .checkBody('updates.socialLinks.twitter', 'Twitter url is invalid')
     .isURL()
     .optional();
   req
-    .checkBody('socialLinks.linkedin', 'Linkedin url is invalid')
+    .checkBody('updates.socialLinks.linkedin', 'Linkedin url is invalid')
     .isURL()
     .optional();
   req
-    .checkBody('designation', 'Designation should be minimum 3 chars')
+    .checkBody('updates.designation', 'Designation should be minimum 3 chars')
     .isLength({ min: 3 })
     .optional();
   req
-    .checkBody('bio', 'Bio should be minimum 10 chars')
+    .checkBody('updates.bio', 'Bio should be minimum 10 chars')
     .isLength({ min: 5 })
     .optional();
 
