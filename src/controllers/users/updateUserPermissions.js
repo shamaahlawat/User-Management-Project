@@ -23,6 +23,11 @@ export async function updateUserPermissions(req, res) {
     }
 
     const { email, permissions } = req.body;
+
+    if (!permissions) {
+      return sendResponse(res, 422, {}, 'Missing permissions object');
+    }
+
     await isOperationAllowed({ id: req.user.id, operationEmail: email });
     const data = await updateUserPermissionsService({ email, permissions });
     return sendResponse(res, 200, { user: data }, 'Fetched data successfully');
