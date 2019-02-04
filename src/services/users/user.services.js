@@ -88,9 +88,9 @@ export async function checkUserPermissionService({ _id, action }) {
 
 export async function getUserPermissionsService({ id }) {
   await doesUserExists({ _id: new mongoose.Types.ObjectId(id) });
-  const fileds =
+  const fields =
     'socialLinks designation bio email firstName lastName isActive isVerified isDeleted permissions';
-  const userDetails = await User.find({ _id: id }, fileds);
+  const userDetails = await User.find({ _id: id }, fields);
   if (!userDetails.length) {
     throw { code: 404, msg: 'User not found' };
   }

@@ -7,7 +7,7 @@ import {
 import { deleteUserService } from '../../services/users/user.services';
 import PERMISSIONS from '../../constants/checkPermission';
 
-export async function deleteExistinUser(req, res) {
+export async function deleteExistingUser(req, res) {
   try {
     const errors = validateUserEmailAndId(req); // both payload are same
     if (errors) {

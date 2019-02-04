@@ -14,7 +14,7 @@ import {
   verifyTemporaryToken,
   toggleIsActiveUser,
   sendActivationEmail,
-  deleteExistinUser
+  deleteExistingUser
 } from '../controllers/users';
 import { isAuthenticated } from '../middlewares';
 
@@ -32,7 +32,7 @@ userRoutes.get('/users', isAuthenticated, getUsers);
 userRoutes.get('/users/settings', isAuthenticated, getUserPermissions);
 userRoutes.patch('/users/settings', isAuthenticated, updateUserPermissions);
 userRoutes.patch('/users/activation', isAuthenticated, toggleIsActiveUser);
-userRoutes.delete('/users', isAuthenticated, deleteExistinUser);
+userRoutes.delete('/users', isAuthenticated, deleteExistingUser);
 userRoutes.patch('/users/profile', isAuthenticated, updateUserProfile);
 
 export default userRoutes;

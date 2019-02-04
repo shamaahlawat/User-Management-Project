@@ -11,7 +11,7 @@ import { activateAccount } from './activateUsers';
 import { verifyTemporaryToken } from './verifyToken';
 import { toggleIsActiveUser } from './toggleIsActive';
 import { sendActivationEmail } from './sendActivationEmail';
-import { deleteExistinUser } from './deleteUsers';
+import { deleteExistingUser } from './deleteUsers';
 export {
   loginUser,
   createUsers,
@@ -26,5 +26,5 @@ export {
   verifyTemporaryToken,
   toggleIsActiveUser,
   sendActivationEmail,
-  deleteExistinUser
+  deleteExistingUser
 };
