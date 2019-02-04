@@ -22,7 +22,8 @@ export async function createUsers(req, res) {
       return sendResponse(res, 403, {}, 'Not allowed');
     }
 
-    const { users = [], host } = req.body;
+    const { users = [] } = req.body;
+    const { host } = req;
     if (!host) {
       throw { code: 400, msg: 'host value is invalid/missing ' };
     }

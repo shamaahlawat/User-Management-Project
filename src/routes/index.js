@@ -7,6 +7,6 @@ const routes = Router();
 routes.get('/', (req, res) => {
   sendResponse(res, 200, { message: 'Welcome to User Module' }, 'Good to go!');
 });
-routes.use('/users', userRoutes);
+routes.use('/', userRoutes);
 
 export default routes;

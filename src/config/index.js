@@ -10,7 +10,7 @@ const config = {
   REFRESH_TOKEN_EXPIRY: '7d',
   REFRESH_TOKEN_ALGO: 'HS384',
   PASS_HASH_ROUNDS: 10,
-  SENDGRID_API_KEY: ''
+  SENDGRID_API_KEY: null
 };
 
 export default config;
