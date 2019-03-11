@@ -6,7 +6,10 @@ const USER_INVALID = 'Permission check failed, user is invalid';
 const INVALID_OPERATION = 'Invalid operation, not allowed';
 
 export async function isActionAllowed(_id, action) {
+  console.log(_id);
+  
   const user = await User.findById(_id);
+
   if (!user) {
     throw { code: 404, msg: USER_NOT_FOUND };
   }

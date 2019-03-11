@@ -8,7 +8,6 @@ import {
 import PERMISSIONS from '../../constants/checkPermission';
 
 export async function createUsers(req, res) {
-  console.log('helllllllllllllllo');
   try {
     const errors = validateUserCreationPayload(req);
     if (errors) {
