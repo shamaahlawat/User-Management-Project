@@ -40,7 +40,6 @@ export async function createUsers(req, res) {
     // eslint-disable-next-line no-console
     console.error(error);
     if (error.name === 'MongoError' && error.code === 11000) {
-      console.log('helllllllllllllllo');
       return sendResponse(
         res,
         409,

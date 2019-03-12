@@ -6,14 +6,16 @@ const {
   MONGODB_PASSWORD: password,
   MONGODB_HOST: host,
   MONGODB_PORT: port,
-  MONGODB_DATABASE_NAME: databaseName
+  MONGODB_DATABASE_NAME: databaseName,
+  MLAB_USER: mlab_user,
+  MLAB_PASSWORD: mlab_password
 } = CONFIG;
 
 mongoose.Promise = global.Promise;
 
 //const MONGO_URL = `mongodb://${host}:${port}/${databaseName}`;
-const MONGODB_URI = 'mongodb://manmeet:manmeet12@ds121495.mlab.com:21495/weaverse';
-
+const MONGODB_URI = `mongodb://${mlab_user}:${mlab_password}@ds121495.mlab.com:21495/weaverse`;
+console.log(MONGODB_URI);
 const options = {
   reconnectTries: Number.MAX_VALUE, // Never stop trying to reconnect
   reconnectInterval: 500, // Reconnect every 500ms
