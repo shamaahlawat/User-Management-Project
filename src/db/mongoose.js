@@ -14,8 +14,13 @@ const {
 mongoose.Promise = global.Promise;
 
 //const MONGO_URL = `mongodb://${host}:${port}/${databaseName}`;
-const MONGODB_URI = `mongodb://${mlab_user}:${mlab_password}@ds121495.mlab.com:21495/weaverse`;
-console.log(MONGODB_URI);
+// const MONGODB_URI = `mongodb://${mlab_user}:${mlab_password}@ds121495.mlab.com:21495/weaverse`;
+
+const MONGODB_URI = `mongodb+srv://${mlab_user}:${mlab_password}@cluster0-b9rob.mongodb.net/test?retryWrites=true`;
+
+
+
+console.log('MONGO CONNECTION',MONGODB_URI);
 const options = {
   reconnectTries: Number.MAX_VALUE, // Never stop trying to reconnect
   reconnectInterval: 500, // Reconnect every 500ms
